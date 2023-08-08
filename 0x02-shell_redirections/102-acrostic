@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -c | paste -s -d ''
+find . -type d -not -name '.' |wc-1
