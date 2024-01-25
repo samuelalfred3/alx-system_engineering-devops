@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script displays specific information from /etc/passwd using read and cut
+
+while IFS=: read -r username _ userid _ homedir _; do
+    echo "$username:$userid:$homedir"
+done < /etc/passwd
+
