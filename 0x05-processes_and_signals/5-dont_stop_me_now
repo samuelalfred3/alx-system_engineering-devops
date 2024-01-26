@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Kills the 4-to_infinity_and_beyond process
+
+# Use pgrep -f to find the process ID of the script
+# and use kill to terminate the process
+kill "$(pgrep -f 4-to_infinity_and_beyond)"
+
