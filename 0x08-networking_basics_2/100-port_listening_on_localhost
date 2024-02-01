@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Port listening on localhost
+
+# Use netcat to listen on port 98 with verbose output
+nc -lkv localhost 98
+
