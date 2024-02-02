@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 # This script configures the local host and facebook.com IP addresses
 
-# Backup the hosts file
 cp /etc/hosts ~/hosts.new
-sed -i 's/^127\.0\.0\.1[[:space:]]localhost/127.0.0.2 localhost/' ~/hosts.new
-sed -i 's/^.*facebook\.com/8.8.8.8 facebook.com/' ~/hosts.new
-sudo cp -f ~/hosts.new /etc/hosts
-rm ~/hosts.new
-
+sed -i 's/^127.0.0.1.*/127.0.0.2 localhost/g' ~/hosts.new
+echo "8.8.8.8 facebook.com" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
