@@ -1,0 +1,7 @@
+# SSH client configuration file
+# ~/.ssh/config
+
+Host 100.25.190.180
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+

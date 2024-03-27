@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Generating SSH key-pairs according to Task requirements
+
+# Generating the RSA key pair with 4096 bits and passphrase "betty"
+ssh-keygen -t rsa -b 4096 -f school -P "betty"
+
+# Check if the key pair generation was successful
+if [ $? -eq 0 ]; then
+    echo "RSA key pair generated successfully."
+    echo "Private key saved as 'school', and public key saved as 'school.pub'."
+else
+    echo "Error generating RSA key pair."
+    exit 1
+fi
+
